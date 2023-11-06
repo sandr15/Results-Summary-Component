@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="result-summary-modal">
+
+    <div class="card result-card">
+      <div class="result-heading">Your Result</div>
+      <div class="score-component">
+        <div class="score result-card-main-text">76</div>
+        <div class="score-detail-text">of 100</div>
+      </div>
+      <div class="result-card-footer">
+        <div class="score-caption result-card-main-text">Great</div>
+        <div class="score-caption-detail-text">You scored higher than 65% of the people who have taken these tests.</div>
+      </div>
+    </div>
+
+    <div class="card summary-card">
+      <div class="summary-heading">Summary</div>
+      <div class="summary-breakdown">
+        <ul>
+          <li>
+            <div class="summary-item-container reaction-item">
+              <span class="summary-item-name-container reaction-item-name">
+                <img src="assets/images/icon-reaction.svg" class="summary-item-icon"/>
+                <span>&nbsp;Reaction</span>
+              </span>
+              <span class="summary-item-value">
+                <span class="summary-item-score">80</span>
+                <span class="summary-item-score-denominator">/ 100</span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="summary-item-container memory-item">
+              <span class="summary-item-name-container memory-item-name">
+                <img src="assets/images/icon-memory.svg" class="summary-item-icon"/>
+                <span>&nbsp;Memory</span>
+              </span>
+              <span class="summary-item-value">
+                <span class="summary-item-score">92</span>
+                <span class="summary-item-score-denominator">/ 100</span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="summary-item-container verbal-item">
+              <span class="summary-item-name-container verbal-item-name">
+                <img src="assets/images/icon-verbal.svg" class="summary-item-icon"/>
+                <span>&nbsp;Verbal</span>
+              </span>
+              <span class="summary-item-value">
+                <span class="summary-item-score">61</span>
+                <span class="summary-item-score-denominator">/ 100</span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="summary-item-container visual-item">
+              <span class="summary-item-name-container visual-item-name">
+                <img src="assets/images/icon-visual.svg" class="summary-item-icon"/>
+                <span>&nbsp;Visual</span>
+              </span>
+              <span class="summary-item-value">
+                <span class="summary-item-score">72</span>
+                <span class="summary-item-score-denominator">/ 100</span>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="continue-button">Continue</div>
+    </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Andrew Siemon</a>.
+  </div>
+</body>
+</html>

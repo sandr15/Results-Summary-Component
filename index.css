@@ -1,0 +1,229 @@
+/* Load custom fonts
+ * For more information, see this informative DigitalOcean article:
+ * https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#loading-a-self-hosted-font-with-font-face
+ */
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+/* Global properties */
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+/* Mobile attributes */
+@media (max-width: 375px) {
+    .result-summary-modal {
+        flex-direction: column;
+    }
+
+    .result-card {
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+
+    .attribution {
+        visibility: hidden;
+    }
+}
+
+/* Desktop attributes */
+@media (min-width: 376px) {
+    .result-summary-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        border-radius: 1em;
+    }
+
+    .result-card {
+        border-radius: 1em;
+    }
+}
+
+/* Page layout */
+.result-summary-modal {
+    display: flex;
+    background-color: white;
+    box-shadow: 0.3em 0.3em 2em hsl(238, 27%, 78%);
+}
+
+/* Card styling */
+.card {
+    padding: 1em;
+}
+
+/* Styling the result card */
+.result-card {
+    color: hsl(254 36% 83%);
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-heading {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: large;
+    font-weight: 500;
+}
+
+.score-component {
+    border-radius: 50%;
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    padding: 0%;
+    width: 8em;
+    height: 8em;
+}
+
+.score {
+    font-size: xxx-large;
+    font-weight: 800;
+    padding-top: 20%;
+}
+
+.score-caption {
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.result-card-main-text {
+    color: white;
+}
+
+.result-card-footer {
+    padding-top: 10%;
+}
+
+.score-detail-text {
+    font-size: x-small;
+}
+
+.score-caption-detail-text {
+    font-size: small;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Styling the summary card */
+.summary-card {
+    flex: 1;
+    border-top-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.summary-heading {
+    font-weight: 600;
+    font-size: large;
+}
+
+.summary-item-container {
+    display: flex;
+    /* Place the summary item name and value on either ends */
+    justify-content: space-between;
+    align-content: baseline;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.summary-item-name-container {
+    flex: 1;
+    display: flex;
+}
+
+.summary-item-icon {
+    display: block;
+}
+
+.summary-item-value {
+    flex: 1;
+    text-align: right;
+}
+
+.summary-item-score {
+    font-weight: 600;
+}
+
+.summary-item-score-denominator {
+    color: hsl(240, 0%, 59%);
+    font-size: small;
+}
+
+/* Style applied to individual summary components */
+.reaction-item {
+    background-color: hsl(356 66% 97%);
+}
+
+.reaction-item-name {
+    color: #F55;
+}
+
+.memory-item {
+    background-color: hsl(57 100% 98%);
+}
+
+.memory-item-name {
+    color: #FFB21E;
+}
+
+.verbal-item {
+    background-color: hsl(168 100% 98%);
+}
+
+.verbal-item-name {
+    color: #00BB8F;
+}
+
+.visual-item {
+    background-color: hsl(266 100% 98%);
+}
+
+.visual-item-name {
+    color: #1125D6;
+}
+
+.continue-button {
+    /* Since we unset all button properties, we need to add this back */
+    box-sizing: border-box;
+    /* See the following stack overflow post to understand why this works:
+     * https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em
+     */
+    border-radius: 900px;
+    color: white;
+    background-color: hsl(254 27% 24%);
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.continue-button:hover {
+    background: linear-gradient(180deg, hsl(254 75% 35%), hsl(254 83% 54%));
+}
+
+.continue-button:focus {
+    background: linear-gradient(180deg, hsl(254 75% 35%), hsl(254 83% 54%));
+}
+
+.continue-button:active {
+    background: linear-gradient(180deg, hsl(254, 77%, 31%), hsl(254, 75%, 48%));
+}
+
+/* Move the attribution to the bottom */
+.attribution {
+    position: fixed;
+    bottom: 1em;
+}
