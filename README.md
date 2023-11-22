@@ -27,59 +27,70 @@ Users should be able to:
 ### Screenshot
 
 ![desktop solution screenshot](./desktop-screenshot.png)
-![mobile screenshot top](./mobile-screenshot-top.png)
-![mobile screenshot bottom](./mobile-screenshot-bottom.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/sandr15/Results-Summary-Component
+- Live Site URL: https://sandr15.github.io/Results-Summary-Component/
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
+- HTML5
+- CSS
 - Flexbox
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+1. Load custom fonts with the @font-face CSS at-rule.
 
-To see how you can add code snippets, see below:
+2. Use media queries to apply CSS rules based on the screen size.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+3. The concept of a "font stack". When specifying the font-family for
+a page, you can supply multiple font names. The browser will attempt to use
+the first font specified, but can fall back to the next specified font if the
+current font cannot be applied. You can specify as many fonts as you want; generally with more universal fonts appearing at the bottom of your stack.
+
+*Code demonstrating a font stack:*
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+4. CSS layout with flexbox and positioning. Flexbox makes it simple to layout
+the elements on your page in a single dimension (i.e. horizontally or
+vertically). Positioning, on the other hand, allows you to remove elements
+from the normal document flow. I used flexbox extensively to lay out the
+elements in the main modal, and I used positioning to fix the modal to the
+center of the display (for desktop displays).
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+*Code to position the modal in the center of the screen:*
+```css
+.result-summary-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+1. Gain experience using CSS grid layout / practice more layouts.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+2. Transition from pure CSS to SASS.
+
+3. Practice React skills by creating this design with JSX.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [How to Load and Use Custom Fonts with CSS](https://www.digitalocean.com/community/tutorials/how-to-load-and-use-custom-fonts-with-css#loading-a-self-hosted-font-with-font-face) - This helped me learn how to use the `@font-face` at-rule. This will make it incredibly easy to incorporate more fonts into future projects.
+- [Border Radius in Percentage vs Pixels](https://stackoverflow.com/questions/29966499/border-radius-in-percentage-and-pixels-px-or-em) - This helped me learn how to create a *stadium* shape for a button. At first, I
+attempted to create the shape using percentage values. This post helped me to
+figure out where I was going wrong.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Andrew Siemon - [Frontend Mentor Profile](https://www.frontendmentor.io/profile/sandr15)
